@@ -23,7 +23,7 @@ new features.
  - Show/hide keyboard on signals (SIGUSR1 = hide, SIGUSR2 = show, SIGRTMIN = toggle)
  - Automatic portrait/landscape detection and subsequent layout switching
 
-<img src="https://raw.githubusercontent.com/mattahway/wvkbd/master/contrib/wvkbd_surface_hyprland_landscape.png" width=640 />
+<img src="https://raw.githubusercontent.com/matthewben-net/wvkbd/master/contrib/wvkbd_surface_hyprland_landscape.png" width=640 />
 
 There are some areas that still need work:
 
