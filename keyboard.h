@@ -22,6 +22,7 @@ enum key_type {
 	Layout,  // Layout switch to a specific layout
 	BackLayer, // Layout switch to the layout that was previously active
 	NextLayer, // Layout switch to the next layout in the layers sequence
+	HideKeyboard, // Hides the keyboard
 	Compose,   // Compose modifier key, switches to a specific associated layout
 	           // upon next keypress
 	EndRow,    // Incidates the end of a key row

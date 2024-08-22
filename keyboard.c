@@ -384,6 +384,8 @@ kbd_press_key(struct kbd *kb, struct key *k, uint32_t time)
         }
     }
 
+    bool hide = false;
+
     switch (k->type) {
     case Code:
         if (k->code_mod) {
@@ -473,6 +475,9 @@ kbd_press_key(struct kbd *kb, struct key *k, uint32_t time)
             }
         }
         break;
+    case HideKeyboard:
+        hide = true;
+        break;
     case Copy:
         // copy code as unicode chr by setting a temporary keymap
         kb->last_swipe = kb->last_press = k;
@@ -493,6 +498,11 @@ kbd_press_key(struct kbd *kb, struct key *k, uint32_t time)
 
     drwsurf_flip(kb->surf);
     drwsurf_flip(kb->popup_surf);
+
+    if (hide) {
+        // pthread_kill(pthread_self(), SIGUSR1);
+        system("sleep 0.1; pkill -USR1 wvkbd-mobintl");
+    }
 }
 
 void
