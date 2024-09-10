@@ -6,7 +6,7 @@
 #define KBD_PIXEL_LANDSCAPE_HEIGHT 350
 
 /* spacing around each key */
-#define KBD_KEY_BORDER 2
+#define KBD_KEY_BORDER 1
 
 /* layout declarations */
 enum layout_id {
@@ -1102,7 +1102,6 @@ static struct key keys_index[] = {
 };
 
 static struct key keys_landscape[] = {
-  {"", "", 0.05, Pad},
   {"Esc", "Esc", 1.24, Code, KEY_ESC, .scheme = 1},
   {"F1", "F1", 1.0, Code, KEY_F1, .scheme = 1},
   {"F2", "F2", 1.0, Code, KEY_F2, .scheme = 1},
@@ -1119,10 +1118,8 @@ static struct key keys_landscape[] = {
   {"PgUp", "PgUp", 0.5, Code, KEY_PAGEUP, .scheme = 1, .scheme = 1},
   {"PgDn", "PgDn", 0.5, Code, KEY_PAGEDOWN, .scheme = 1, .scheme = 1},
   {"Del", "Del", 1.24, Code, KEY_DELETE, .scheme = 1},
-  {"", "", 0.05, Pad},
   {"", "", 0.0, EndRow},
 
-  {"", "", 0.049, Pad},
   {"`", "~", 0.54, Code, KEY_GRAVE, .scheme = 1},
   {"1", "!", 1.0, Code, KEY_1},
   {"2", "@", 1.0, Code, KEY_2},
@@ -1137,10 +1134,8 @@ static struct key keys_landscape[] = {
   {"-", "_", 0.54, Code, KEY_MINUS, &layouts[ComposeBracket]},
   {"=", "+", 0.54, Code, KEY_EQUAL, &layouts[ComposeBracket]},
   {"⌫", "⌫", 0.88, Code, KEY_BACKSPACE, .scheme = 1},
-  {"", "", 0.049, Pad},
   {"", "", 0.0, EndRow},
 
-  {"", "", 0.05, Pad},
   {"Tab", "Tab", 0.84, Code, KEY_TAB, .scheme = 1},
   {"q", "Q", 1.0, Code, KEY_Q, &layouts[Emoji]},
   {"w", "W", 1.0, Code, KEY_W, &layouts[ComposeW]},
@@ -1155,10 +1150,8 @@ static struct key keys_landscape[] = {
   {"[", "{", 0.468, Code, KEY_LEFTBRACE},
   {"]", "}", 0.468, Code, KEY_RIGHTBRACE},
   {"\\", "|", 0.54, Code, KEY_BACKSLASH, .scheme = 1},
-  {"", "", 0.05, Pad},
   {"", "", 0.0, EndRow},
 
-  {"", "", 0.049, Pad},
   {"Ctrl", "Ctrl", 1.0, Mod, Ctrl, .scheme = 1},
   {"a", "A", 1.0, Code, KEY_A, &layouts[ComposeA]},
   {"s", "S", 1.0, Code, KEY_S, &layouts[ComposeS]},
@@ -1172,10 +1165,8 @@ static struct key keys_landscape[] = {
   {";", ":", 0.468, Code, KEY_SEMICOLON},
   {"'", "''", 0.468, Code, KEY_APOSTROPHE, &layouts[ComposeBracket]},
   {"Enter", "Enter", 0.84, Code, KEY_ENTER, .scheme = 1},
-  {"", "", 0.049, Pad},
   {"", "", 0.0, EndRow},
 
-  {"", "", 0.046, Pad},
   {"<>", "<>", 0.44, Layout, 0, &layouts[Special], .scheme = 1},
   {"⇧", "⇫", 0.88, Mod, Shift, .scheme = 1},
   {"z", "Z", 1.0, Code, KEY_Z, &layouts[ComposeZ]},
@@ -1190,10 +1181,8 @@ static struct key keys_landscape[] = {
   {"/", "?", 0.46, Code, KEY_SLASH},
   {"↑", "↑", 0.6, Code, KEY_UP, .scheme = 1},
   {"⇧", "⇫", 1.0, Mod, Shift, .scheme = 1},
-  {"", "", 0.046, Pad},
   {"", "", 0.0, EndRow},
 
-  {"", "", 0.037, Pad},
   {"Caps", "Caps", 0.6, Mod, CapsLock, .scheme = 1},
   {"", "'", 0.6, Mod, Super, .scheme = 1},
   {"Alt", "Alt", 0.6, Mod, Alt, .scheme = 1},
@@ -1202,7 +1191,6 @@ static struct key keys_landscape[] = {
   {"↓", "↓", 0.462, Code, KEY_DOWN, .scheme = 1},
   {"→", "→", 0.462, Code, KEY_RIGHT, .scheme = 1},
   {"⌨͕", "⌨͔", 0.32, HideKeyboard, .scheme = 1},
-  {"", "", 0.037, Pad},
   /* end of layout */
   {"", "", 0.0, Last},
 };

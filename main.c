@@ -76,7 +76,7 @@ static int cur_x = -1, cur_y = -1;
 static bool cur_press = false;
 static struct kbd keyboard;
 static uint32_t height, normal_height, landscape_height;
-static int rounding = 12;
+static int rounding = 0;
 static bool hidden = false;
 
 /* event handler prototypes */
